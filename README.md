@@ -57,6 +57,23 @@
 ```
 
 ## 安装
+
+方式一：
+
+```
+git clone https://github.com/kailong321200875/webpack-multiPage-cli.git
+```
+
+方式二：
+
+全局安装脚手架
+
+```
+npm install -g webpack4-cli
+
+webpack4 init
+```
+
 ```
 # 安装依赖
 npm install
