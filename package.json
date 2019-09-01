@@ -7,8 +7,7 @@
     "dev": "cross-env NODE_ENV=development webpack-dev-server --progress --config build/webpack.dev.conf.js ",
     "build": "node build/build.js",
     "c": "node build/create.js",
-    "lint": "eslint --ext .js --ext .html src/",
-    "lint-fix": "eslint --fix --ext .js --ext .jsx --ext .html src/"
+    "lint": "eslint --fix --ext .js --ext .jsx --ext .html src/"
   },
   "author": "Archer",
   "license": "ISC",

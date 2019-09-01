@@ -84,11 +84,9 @@ npm run dev
 # 动态创建页面
 npm run c 页面名称
 
-# ESlnit检测
-npm run lint
 
 # ESlnit修复
-npm run lint-fix
+npm run lint
 
 # 打包
 npm run build
