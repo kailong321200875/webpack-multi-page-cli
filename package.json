@@ -12,7 +12,8 @@
   "author": "Archer",
   "license": "ISC",
   "dependencies": {
-    "jquery": "^3.4.1"
+    "jquery": "^3.4.1",
+    "lodash": "^4.17.15"
   },
   "devDependencies": {
     "autoprefixer": "^8.5.0",

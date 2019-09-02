@@ -61,16 +61,23 @@ module.exports = {
     splitChunks: {
       cacheGroups: {
         vendor: {
-          test: /node_modules/,
+          test: /[\\/]node_modules[\\/]/,
           chunks: 'initial',
           name: 'vendor',
           priority: 10
         },
-        utils: {
-          chunks: 'initial',
+        jquery: {
+          name: 'jquery',
+          priority: 20,
+          chunks: 'all',
+          test: /[\\/]node_modules[\\/]_?jquery(.*)/
+        },
+        common: {
+          chunks: 'all',
           name: 'common',
-          minSize: 0,
-          minChunks: 2
+          test: /[\\/]src[\\/]_?common(.*)/,
+          minChunks: 3,
+          priority: 5
         }
       }
     }
@@ -109,7 +116,7 @@ Object.keys(entryObj).forEach(element => {
   htmlArray.push({
     _html: element,
     title: '',
-    chunks: ['vendor', 'common', element]
+    chunks: ['vendor', 'jquery', 'common', element]
   })
 })
 

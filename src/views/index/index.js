@@ -1,4 +1,6 @@
 import './index.scss'
+import '@/common/loadsh.min'
+import _ from 'lodash'
 
 console.log('我进来了。' + 'dddd')
 
