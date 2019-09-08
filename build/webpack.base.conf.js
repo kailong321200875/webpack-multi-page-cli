@@ -40,6 +40,7 @@ function getEntry() {
       let n = name.slice(start, end)
       n = n.slice(0, n.lastIndexOf('/'))
       n = n.split('views/')[1]
+      eArr.push('babel-polyfill')
       eArr.push(name)
       entry[n] = eArr
     })
