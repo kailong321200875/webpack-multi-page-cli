@@ -1,13 +1,5 @@
-import './index.scss'
-import '@/common/loadsh.min'
-// import _ from 'lodash'
+// import '@/assets/fonts/iconfont.css'
+import './index.css'
+import './index.less'
 
-console.log('我进来了。' + 'dddd')
-
-console.log($('span').click(() => {
-  window.location.href = 'home.html'
-  window.open('home.html')
-}))
-
-const data = 'es6'
-console.log(data)
+console.log('index.js')
