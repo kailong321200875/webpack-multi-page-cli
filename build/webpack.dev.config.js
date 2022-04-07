@@ -7,9 +7,6 @@ const path = require('path')
 // 引入打包html插件
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-// 引入静态资源复制插件
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-
 // 引入基础配置文件
 const baseWebpackConfig = require('./webpack.base.config')
 
@@ -17,18 +14,23 @@ const devWebpackConfig = merge(baseWebpackConfig, {
   // 模式，必填项
   mode: 'development',
 
-  // 打包入口地址
-  entry: {
-    // 由于可能是多页，所以采用对象的形式
-    index: ['./src/views/index/index.js']
+  // 开启持久化缓存
+  cache: {
+    type: 'filesystem',
+    buildDependencies: {
+      config: [__filename]
+    }
   },
 
   output: {
     // 输出文件目录
     path: path.resolve(__dirname, '../dist'),
     // 输出文件名
-    filename: 'js/[name].js',
+    filename: 'js/[name].js'
   },
+
+  // 源码映射
+  devtool: 'eval-cheap-module-source-map',
 
   // 开发服务配置
   devServer: {
@@ -52,21 +54,8 @@ const devWebpackConfig = merge(baseWebpackConfig, {
   // 插件
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/views/index/index.html'
-    }),
-
-    // 把public的一些静态文件复制到指定位置，排除 html 文件
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: path.resolve(__dirname, '../public'),
-          globOptions: {
-            dot: true,
-            gitignore: true,
-            ignore: ['**/*.html']
-          }
-        }
-      ]
+      template: './src/views/index/index.html',
+      favicon: path.resolve(__dirname, '../public/favicon.ico')
     })
   ]
 })

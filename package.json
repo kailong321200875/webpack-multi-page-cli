@@ -5,22 +5,29 @@
   "main": "index.js",
   "scripts": {
     "serve": "cross-env NODE_ENV=development webpack serve --progress --no-stats --config ./build/webpack.dev.config.js",
+    "build": "cross-env NODE_ENV=production webpack --config ./build/webpack.pro.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kailong321200875/webpack-multiPage-cli.git"
+    "url": "git+https://github.com/kailong321200875/webpack-multi-page-cli.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kailong321200875/webpack-multiPage-cli/issues"
+    "url": "https://github.com/kailong321200875/webpack-multi-page-cli/issues"
   },
-  "homepage": "https://github.com/kailong321200875/webpack-multiPage-cli#readme",
+  "homepage": "https://github.com/kailong321200875/webpack-multi-page-cli#readme",
   "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.4",
     "copy-webpack-plugin": "^10.2.4",
+    "core-js": "^3.21.1",
     "cross-env": "^7.0.3",
-    "css-loader": "^6.7.1",
+    "css-loader": "5.2.7",
+    "css-minimizer-webpack-plugin": "^3.4.1",
+    "html-loader": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",
     "less": "^4.1.2",
     "less-loader": "^10.2.0",

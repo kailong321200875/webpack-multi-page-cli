@@ -1,5 +1,10 @@
 @import './style.less';
 
 div {
-  background-color: yellow;
+  /* background-color: yellow; */
+  background: url("~@/assets/imgs/login-bg.jpg");
+}
+
+#haha {
+  color: red;
 }
