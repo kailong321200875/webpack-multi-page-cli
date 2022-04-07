@@ -1,4 +1,27 @@
-div {
-  width: 500px;
-  transform: translateX(50%);
+.content {
+  text-align: center;
+  &__background {
+    width: 500px;
+    height: 200px;
+    background: url('~@/assets/imgs/bg.jpeg') center;
+    background-size: 100% 100%;
+    margin: 0 auto;
+  }
+  &__icon {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    & > i {
+      margin: 0 20px;
+    }
+  }
+  &__video {
+    width: 500px;
+    height: 200px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    & > video {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
