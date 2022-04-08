@@ -46,7 +46,8 @@ module.exports = {
             loader: 'css-loader',
             options: {
               // 是否使用source-map
-              sourceMap: !isProduction
+              sourceMap: !isProduction,
+              esModule: false
             }
           },
           {
