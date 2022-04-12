@@ -50,4 +50,21 @@ pnpm run build
 ## 贡献者
 
 <!-- readme: collaborators,contributors -start -->
+<table>
+<tr>
+    <td align="center">
+        <a href="https://github.com/kailong321200875">
+            <img src="https://avatars.githubusercontent.com/u/32283845?v=4" width="100;" alt="kailong321200875"/>
+            <br />
+            <sub><b>Archer</b></sub>
+        </a>
+    </td>
+    <td align="center">
+        <a href="https://github.com/kailong502431556">
+            <img src="https://avatars.githubusercontent.com/u/30221169?v=4" width="100;" alt="kailong502431556"/>
+            <br />
+            <sub><b>kailong502431556</b></sub>
+        </a>
+    </td></tr>
+</table>
 <!-- readme: collaborators,contributors -end -->
