@@ -47,12 +47,7 @@ pnpm run build
 | :-: | :-: | :-: | :-: | :-: |
 | support IE11 | last 2 versions | last 2 versions | last 2 versions | last 2 versions |
 
-## 合作者
-
-<!-- readme: collaborators -start -->
-<!-- readme: collaborators -end -->
-
 ## 贡献者
 
-<!-- readme: contributors -start -->
-<!-- readme: contributors -start -->
+<!-- readme: collaborators,contributors -start -->
+<!-- readme: collaborators,contributors -end -->
