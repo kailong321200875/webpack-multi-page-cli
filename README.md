@@ -50,6 +50,16 @@ pnpm run build
 ## 合作者
 
 <!-- readme: collaborators -start -->
+<table>
+<tr>
+    <td align="center">
+        <a href="https://github.com/kailong321200875">
+            <img src="https://avatars.githubusercontent.com/u/32283845?v=4" width="100;" alt="kailong321200875"/>
+            <br />
+            <sub><b>Archer</b></sub>
+        </a>
+    </td></tr>
+</table>
 <!-- readme: collaborators -end -->
 
 ## 贡献者
