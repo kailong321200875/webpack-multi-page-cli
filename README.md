@@ -63,7 +63,7 @@ pnpm run build
         <a href="https://github.com/kailong502431556">
             <img src="https://avatars.githubusercontent.com/u/30221169?v=4" width="100;" alt="kailong502431556"/>
             <br />
-            <sub><b>kailong502431556</b></sub>
+            <sub><b>Kailong502431556</b></sub>
         </a>
     </td></tr>
 </table>
