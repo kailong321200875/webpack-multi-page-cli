@@ -7,6 +7,9 @@
     "serve": "cross-env NODE_ENV=development webpack serve --progress --no-stats --config ./build/webpack.dev.config.js",
     "build": "cross-env NODE_ENV=production webpack --config ./build/webpack.pro.config.js",
     "p": "plop --plopfile ./plop/generator/create-module.js",
+    "clean": "npx rimraf node_modules",
+    "clean:cache": "npx rimraf node_modules/.cache",
+    "npm:check": "npx npm-check-updates",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
