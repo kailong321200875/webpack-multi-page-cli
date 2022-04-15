@@ -27,10 +27,6 @@ module.exports = {
     }
   },
 
-  // context 是 webpack entry 的上下文，是入口文件所处的目录的绝对路径，默认情况下是当前根目录。
-  // 由于我们 webpack 配置文件放于 build 目录下，所以需要重新设置下 context ，使其指向根目录。
-  context: path.resolve(__dirname, '../'),
-
   // 构建目标
   target: ['web', 'es5'],
 

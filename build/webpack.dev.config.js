@@ -7,6 +7,8 @@ const path = require('path')
 // 引入打包html插件
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
+const ESLintPlugin = require('eslint-webpack-plugin')
+
 // 引入基础配置文件
 const baseWebpackConfig = require('./webpack.base.config')
 
@@ -56,6 +58,9 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     new HtmlWebpackPlugin({
       template: './src/views/index/index.html',
       favicon: path.resolve(__dirname, '../public/favicon.ico')
+    }),
+    new ESLintPlugin({
+      extensions: ['js', 'html']
     })
   ]
 })
