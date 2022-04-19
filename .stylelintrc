@@ -1,7 +1,7 @@
 {
   "root": true,
   "plugins": ["stylelint-order"],
-  "customSyntax": "postcss-html",
+  "customSyntax": "postcss-less",
   "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
   "rules": {
     "selector-pseudo-class-no-unknown": [
@@ -204,6 +204,5 @@
       "unicode-bidi",
       "speak"
     ]
-  },
-  "ignoreFiles": ["**/*.js"]
+  }
 }

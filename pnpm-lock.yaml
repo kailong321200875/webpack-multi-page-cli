@@ -21,16 +21,17 @@ specifiers:
   husky: ^7.0.4
   less: ^4.1.2
   less-loader: ^10.2.0
-  lint-staged: ^12.3.7
+  lint-staged: ^12.3.8
   mini-css-extract-plugin: ^2.6.0
   plop: ^3.0.5
   postcss: ^8.4.12
   postcss-html: ^1.4.1
+  postcss-less: ^6.0.0
   postcss-loader: ^6.2.1
   postcss-preset-env: ^7.4.3
   prettier: ^2.6.2
   style-loader: ^3.3.1
-  stylelint: ^14.6.1
+  stylelint: ^14.7.1
   stylelint-config-html: ^1.0.0
   stylelint-config-prettier: ^9.0.3
   stylelint-config-recommended: ^7.0.0
@@ -62,21 +63,22 @@ devDependencies:
   husky: 7.0.4
   less: registry.npmmirror.com/less/4.1.2
   less-loader: registry.npmmirror.com/less-loader/10.2.0_less@4.1.2+webpack@5.72.0
-  lint-staged: 12.3.7
+  lint-staged: 12.3.8
   mini-css-extract-plugin: registry.npmmirror.com/mini-css-extract-plugin/2.6.0_webpack@5.72.0
   plop: registry.npmmirror.com/plop/3.0.5
   postcss: registry.npmmirror.com/postcss/8.4.12
   postcss-html: 1.4.1
+  postcss-less: 6.0.0_postcss@8.4.12
   postcss-loader: registry.npmmirror.com/postcss-loader/6.2.1_postcss@8.4.12+webpack@5.72.0
   postcss-preset-env: registry.npmmirror.com/postcss-preset-env/7.4.3_postcss@8.4.12
   prettier: 2.6.2
   style-loader: registry.npmmirror.com/style-loader/3.3.1_webpack@5.72.0
-  stylelint: 14.6.1
-  stylelint-config-html: 1.0.0_3ea8525ef4b957e05388a0ad7672a70d
-  stylelint-config-prettier: 9.0.3_stylelint@14.6.1
-  stylelint-config-recommended: 7.0.0_stylelint@14.6.1
-  stylelint-config-standard: 25.0.0_stylelint@14.6.1
-  stylelint-order: 5.0.0_stylelint@14.6.1
+  stylelint: 14.7.1
+  stylelint-config-html: 1.0.0_1a82b100232bbe7036ec0a7ca7a4baf4
+  stylelint-config-prettier: 9.0.3_stylelint@14.7.1
+  stylelint-config-recommended: 7.0.0_stylelint@14.7.1
+  stylelint-config-standard: 25.0.0_stylelint@14.7.1
+  stylelint-order: 5.0.0_stylelint@14.7.1
   webpack: 5.72.0_webpack-cli@4.9.2
   webpack-cli: registry.npmmirror.com/webpack-cli/4.9.2_0d7fbf49284cee8179ee97aed7cf05b4
   webpack-dev-server: 4.8.1_webpack-cli@4.9.2+webpack@5.72.0
@@ -1135,6 +1137,13 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       restore-cursor: 3.1.0
+    dev: true
+
+  /cli-cursor/4.0.0:
+    resolution: {integrity: sha512-VGtlMu3x/4DOtIUwEkRezxUZ2lBacNJCHash0N0WeZDBS+7Ux1dm3XWAgWYxLJFMMdOeXMHXorshEFhbMSGelg==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dependencies:
+      restore-cursor: 4.0.0
     dev: true
 
   /cli-truncate/2.1.0:
@@ -2546,12 +2555,17 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
+  /lilconfig/2.0.5:
+    resolution: {integrity: sha512-xaYmXZtTHPAw5m+xLN8ab9C+3a8YmV3asNSPOATITbtwrfbwaLJj8h66H1WMIpALCkqsIzK3h7oQ+PdX+LQ9Eg==}
+    engines: {node: '>=10'}
+    dev: true
+
   /lines-and-columns/1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
     dev: true
 
-  /lint-staged/12.3.7:
-    resolution: {integrity: sha512-/S4D726e2GIsDVWIk1XGvheCaDm1SJRQp8efamZFWJxQMVEbOwSysp7xb49Oo73KYCdy97mIWinhlxcoNqIfIQ==}
+  /lint-staged/12.3.8:
+    resolution: {integrity: sha512-0+UpNaqIwKRSGAFOCcpuYNIv/j5QGVC+xUVvmSdxHO+IfIGoHbFLo3XcPmV/LLnsVj5EAncNHVtlITSoY5qWGQ==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     hasBin: true
     dependencies:
@@ -3085,6 +3099,15 @@ packages:
       postcss-safe-parser: 6.0.0_postcss@8.4.12
     dev: true
 
+  /postcss-less/6.0.0_postcss@8.4.12:
+    resolution: {integrity: sha512-FPX16mQLyEjLzEuuJtxA8X3ejDLNGGEG503d2YGZR5Ask1SpDN8KmZUMpzCvyalWRywAn1n1VOA5dcqfCLo5rg==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      postcss: ^8.3.5
+    dependencies:
+      postcss: registry.npmmirror.com/postcss/8.4.12
+    dev: true
+
   /postcss-media-query-parser/0.2.3:
     resolution: {integrity: sha1-J7Ocb02U+Bsac7j3Y1HGCeXO8kQ=}
     dev: true
@@ -3309,6 +3332,14 @@ packages:
   /restore-cursor/3.1.0:
     resolution: {integrity: sha512-l+sSefzHpj5qimhFSE5a8nufZYAM3sBSVMAPtYkmC+4EH2anSGaEMXSD0izRQbu9nfyQ9y5JrVmp7E8oZrUjvA==}
     engines: {node: '>=8'}
+    dependencies:
+      onetime: 5.1.2
+      signal-exit: 3.0.7
+    dev: true
+
+  /restore-cursor/4.0.0:
+    resolution: {integrity: sha512-I9fPXU9geO9bHOt9pHHOhOkYerIMsmVaWB0rA2AI9ERh/+x/i7MV5HKBNrg+ljO5eoPVgCcnFuRjJ9uH6I/3eg==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
       onetime: 5.1.2
       signal-exit: 3.0.7
@@ -3689,7 +3720,7 @@ packages:
     resolution: {integrity: sha1-eVjHk+R+MuB9K1yv5cC/jhLneQI=}
     dev: true
 
-  /stylelint-config-html/1.0.0_3ea8525ef4b957e05388a0ad7672a70d:
+  /stylelint-config-html/1.0.0_1a82b100232bbe7036ec0a7ca7a4baf4:
     resolution: {integrity: sha512-rKQUUWDpaYC7ybsS6tLxddjn6DxhjSIXybElSmcTyVQj3ExhmU3q+l41ktrlwHRyY0M5SkTkZiwngvYPYmsgSQ==}
     engines: {node: ^12 || >=14}
     peerDependencies:
@@ -3697,48 +3728,48 @@ packages:
       stylelint: '>=14.0.0'
     dependencies:
       postcss-html: 1.4.1
-      stylelint: 14.6.1
+      stylelint: 14.7.1
     dev: true
 
-  /stylelint-config-prettier/9.0.3_stylelint@14.6.1:
+  /stylelint-config-prettier/9.0.3_stylelint@14.7.1:
     resolution: {integrity: sha512-5n9gUDp/n5tTMCq1GLqSpA30w2sqWITSSEiAWQlpxkKGAUbjcemQ0nbkRvRUa0B1LgD3+hCvdL7B1eTxy1QHJg==}
     engines: {node: '>= 12'}
     hasBin: true
     peerDependencies:
       stylelint: '>=11.0.0'
     dependencies:
-      stylelint: 14.6.1
+      stylelint: 14.7.1
     dev: true
 
-  /stylelint-config-recommended/7.0.0_stylelint@14.6.1:
+  /stylelint-config-recommended/7.0.0_stylelint@14.7.1:
     resolution: {integrity: sha512-yGn84Bf/q41J4luis1AZ95gj0EQwRX8lWmGmBwkwBNSkpGSpl66XcPTulxGa/Z91aPoNGuIGBmFkcM1MejMo9Q==}
     peerDependencies:
       stylelint: ^14.4.0
     dependencies:
-      stylelint: 14.6.1
+      stylelint: 14.7.1
     dev: true
 
-  /stylelint-config-standard/25.0.0_stylelint@14.6.1:
+  /stylelint-config-standard/25.0.0_stylelint@14.7.1:
     resolution: {integrity: sha512-21HnP3VSpaT1wFjFvv9VjvOGDtAviv47uTp3uFmzcN+3Lt+RYRv6oAplLaV51Kf792JSxJ6svCJh/G18E9VnCA==}
     peerDependencies:
       stylelint: ^14.4.0
     dependencies:
-      stylelint: 14.6.1
-      stylelint-config-recommended: 7.0.0_stylelint@14.6.1
+      stylelint: 14.7.1
+      stylelint-config-recommended: 7.0.0_stylelint@14.7.1
     dev: true
 
-  /stylelint-order/5.0.0_stylelint@14.6.1:
+  /stylelint-order/5.0.0_stylelint@14.7.1:
     resolution: {integrity: sha512-OWQ7pmicXufDw5BlRqzdz3fkGKJPgLyDwD1rFY3AIEfIH/LQY38Vu/85v8/up0I+VPiuGRwbc2Hg3zLAsJaiyw==}
     peerDependencies:
       stylelint: ^14.0.0
     dependencies:
       postcss: 8.4.12
       postcss-sorting: 7.0.1_postcss@8.4.12
-      stylelint: 14.6.1
+      stylelint: 14.7.1
     dev: true
 
-  /stylelint/14.6.1:
-    resolution: {integrity: sha512-FfNdvZUZdzh9KDQxDnO7Opp+prKh8OQVuSW8S13cBtxrooCbm6J6royhUeb++53WPMt04VB+ZbOz/QmzAijs6Q==}
+  /stylelint/14.7.1:
+    resolution: {integrity: sha512-rUOWm67hrzGXXyO/cInENEejF4urh1dLgOb9cr/3XLDb/t/A+rXQp3p6+no8o8QCKTgBUdhVUq/bXMgE988PJw==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     hasBin: true
     dependencies:
@@ -5653,7 +5684,7 @@ packages:
     version: 8.2.1
     dependencies:
       '@types/through': registry.npmmirror.com/@types/through/0.0.30
-      rxjs: registry.npmmirror.com/rxjs/7.5.5
+      rxjs: 7.5.5
     dev: true
 
   registry.npmmirror.com/@types/liftoff/4.0.0:
@@ -5723,15 +5754,6 @@ packages:
         optional: true
     dependencies:
       ajv: 8.11.0
-    dev: true
-
-  registry.npmmirror.com/ansi-escapes/4.3.2:
-    resolution: {integrity: sha512-gKXj5ALrKWQLsYG9jlTRmR/xKluxHV+Z9QEwNIgCfM1/uwPMCuzVVnh5mwTd+OuBZcwSIMbqssNWRm1lE51QaQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/ansi-escapes/-/ansi-escapes-4.3.2.tgz}
-    name: ansi-escapes
-    version: 4.3.2
-    engines: {node: '>=8'}
-    dependencies:
-      type-fest: 0.21.3
     dev: true
 
   registry.npmmirror.com/array-each/1.0.1:
@@ -5923,7 +5945,7 @@ packages:
     version: 4.1.2
     dependencies:
       pascal-case: registry.npmmirror.com/pascal-case/3.1.2
-      tslib: registry.npmmirror.com/tslib/2.3.1
+      tslib: 2.3.1
     dev: true
 
   registry.npmmirror.com/caniuse-api/3.0.0:
@@ -5970,7 +5992,7 @@ packages:
       path-case: registry.npmmirror.com/path-case/3.0.4
       sentence-case: registry.npmmirror.com/sentence-case/3.0.4
       snake-case: registry.npmmirror.com/snake-case/3.0.4
-      tslib: registry.npmmirror.com/tslib/2.3.1
+      tslib: 2.3.1
     dev: true
 
   registry.npmmirror.com/chardet/0.7.0:
@@ -5986,24 +6008,6 @@ packages:
     engines: {node: '>= 10.0'}
     dependencies:
       source-map: 0.6.1
-    dev: true
-
-  registry.npmmirror.com/cli-cursor/3.1.0:
-    resolution: {integrity: sha512-I/zHAwsKf9FqGoXM4WWRACob9+SNukZTd94DWF57E4toouRulbCxcUh6RKUEOQlYTHJnzkPMySvPNaaSLNfLZw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/cli-cursor/-/cli-cursor-3.1.0.tgz}
-    name: cli-cursor
-    version: 3.1.0
-    engines: {node: '>=8'}
-    dependencies:
-      restore-cursor: 3.1.0
-    dev: true
-
-  registry.npmmirror.com/cli-cursor/4.0.0:
-    resolution: {integrity: sha512-VGtlMu3x/4DOtIUwEkRezxUZ2lBacNJCHash0N0WeZDBS+7Ux1dm3XWAgWYxLJFMMdOeXMHXorshEFhbMSGelg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/cli-cursor/-/cli-cursor-4.0.0.tgz}
-    name: cli-cursor
-    version: 4.0.0
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
-    dependencies:
-      restore-cursor: registry.npmmirror.com/restore-cursor/4.0.0
     dev: true
 
   registry.npmmirror.com/cli-spinners/2.6.1:
@@ -6049,13 +6053,6 @@ packages:
     name: commander
     version: 7.2.0
     engines: {node: '>= 10'}
-    dev: true
-
-  registry.npmmirror.com/commander/8.3.0:
-    resolution: {integrity: sha512-OkTL9umf+He2DZkUq8f8J9of7yL6RJKI24dVITBmNfZBmri9zYZQrKkuXiKhyfPSu8tUhnVBB1iKXevvnlR4Ww==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/commander/-/commander-8.3.0.tgz}
-    name: commander
-    version: 8.3.0
-    engines: {node: '>= 12'}
     dev: true
 
   registry.npmmirror.com/commondir/1.0.1:
@@ -6345,7 +6342,7 @@ packages:
       postcss: ^8.2.15
     dependencies:
       cssnano-preset-default: registry.npmmirror.com/cssnano-preset-default/5.2.7_postcss@8.4.12
-      lilconfig: registry.npmmirror.com/lilconfig/2.0.5
+      lilconfig: 2.0.5
       postcss: registry.npmmirror.com/postcss/8.4.12
       yaml: 1.10.2
     dev: true
@@ -6387,7 +6384,7 @@ packages:
       is-glob: 4.0.3
       is-path-cwd: registry.npmmirror.com/is-path-cwd/2.2.0
       is-path-inside: registry.npmmirror.com/is-path-inside/3.0.3
-      p-map: registry.npmmirror.com/p-map/4.0.0
+      p-map: 4.0.0
       rimraf: 3.0.2
       slash: 3.0.0
     dev: true
@@ -6670,7 +6667,7 @@ packages:
     dependencies:
       camel-case: registry.npmmirror.com/camel-case/4.1.2
       clean-css: registry.npmmirror.com/clean-css/5.3.0
-      commander: registry.npmmirror.com/commander/8.3.0
+      commander: 8.3.0
       he: registry.npmmirror.com/he/1.2.0
       param-case: registry.npmmirror.com/param-case/3.0.4
       relateurl: registry.npmmirror.com/relateurl/0.2.7
@@ -6729,9 +6726,9 @@ packages:
     version: 8.2.2
     engines: {node: '>=12.0.0'}
     dependencies:
-      ansi-escapes: registry.npmmirror.com/ansi-escapes/4.3.2
+      ansi-escapes: 4.3.2
       chalk: 4.1.2
-      cli-cursor: registry.npmmirror.com/cli-cursor/3.1.0
+      cli-cursor: 3.1.0
       cli-width: registry.npmmirror.com/cli-width/3.0.0
       external-editor: registry.npmmirror.com/external-editor/3.1.0
       figures: registry.npmmirror.com/figures/3.2.0
@@ -6739,10 +6736,10 @@ packages:
       mute-stream: registry.nlark.com/mute-stream/0.0.8
       ora: registry.npmmirror.com/ora/5.4.1
       run-async: registry.npmmirror.com/run-async/2.4.1
-      rxjs: registry.npmmirror.com/rxjs/7.5.5
+      rxjs: 7.5.5
       string-width: 4.2.3
       strip-ansi: 6.0.1
-      through: registry.npmmirror.com/through/2.3.8
+      through: 2.3.8
     dev: true
 
   registry.npmmirror.com/interpret/2.2.0:
@@ -6926,13 +6923,6 @@ packages:
       resolve: 1.22.0
     dev: true
 
-  registry.npmmirror.com/lilconfig/2.0.5:
-    resolution: {integrity: sha512-xaYmXZtTHPAw5m+xLN8ab9C+3a8YmV3asNSPOATITbtwrfbwaLJj8h66H1WMIpALCkqsIzK3h7oQ+PdX+LQ9Eg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lilconfig/-/lilconfig-2.0.5.tgz}
-    name: lilconfig
-    version: 2.0.5
-    engines: {node: '>=10'}
-    dev: true
-
   registry.npmmirror.com/loader-utils/2.0.2:
     resolution: {integrity: sha512-TM57VeHptv569d/GKh6TAYdzKblwDNiumOdkFnejjD0XwTH87K90w3O7AiJRqdQoXygvi1VQTJTLGhJl7WqA7A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/loader-utils/-/loader-utils-2.0.2.tgz}
     name: loader-utils
@@ -6999,16 +6989,7 @@ packages:
     name: lower-case
     version: 2.0.2
     dependencies:
-      tslib: registry.npmmirror.com/tslib/2.3.1
-    dev: true
-
-  registry.npmmirror.com/lru-cache/6.0.0:
-    resolution: {integrity: sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lru-cache/-/lru-cache-6.0.0.tgz}
-    name: lru-cache
-    version: 6.0.0
-    engines: {node: '>=10'}
-    dependencies:
-      yallist: 4.0.0
+      tslib: 2.3.1
     dev: true
 
   registry.npmmirror.com/make-dir/3.1.0:
@@ -7017,7 +6998,7 @@ packages:
     version: 3.1.0
     engines: {node: '>=8'}
     dependencies:
-      semver: registry.npmmirror.com/semver/6.3.0
+      semver: 6.3.0
     dev: true
 
   registry.npmmirror.com/make-iterator/1.0.1:
@@ -7203,7 +7184,7 @@ packages:
     dependencies:
       bl: registry.npmmirror.com/bl/5.0.0
       chalk: 5.0.1
-      cli-cursor: registry.npmmirror.com/cli-cursor/4.0.0
+      cli-cursor: 4.0.0
       cli-spinners: registry.npmmirror.com/cli-spinners/2.6.1
       is-interactive: registry.npmmirror.com/is-interactive/2.0.0
       is-unicode-supported: registry.npmmirror.com/is-unicode-supported/1.2.0
@@ -7219,22 +7200,13 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  registry.npmmirror.com/p-map/4.0.0:
-    resolution: {integrity: sha512-/bjOqmgETBYB5BoEeGVea8dmvHb2m9GLy1E9W43yeyfP6QQCZGFNa+XRceJEuDB6zqr+gKpIAmlLebMpykw/MQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/p-map/-/p-map-4.0.0.tgz}
-    name: p-map
-    version: 4.0.0
-    engines: {node: '>=10'}
-    dependencies:
-      aggregate-error: 3.1.0
-    dev: true
-
   registry.npmmirror.com/param-case/3.0.4:
     resolution: {integrity: sha512-RXlj7zCYokReqWpOPH9oYivUzLYZ5vAPIfEmCTNViosC78F8F0H9y7T7gG2M39ymgutxF5gcFEsyZQSph9Bp3A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/param-case/-/param-case-3.0.4.tgz}
     name: param-case
     version: 3.0.4
     dependencies:
       dot-case: registry.npmmirror.com/dot-case/3.0.4
-      tslib: registry.npmmirror.com/tslib/2.3.1
+      tslib: 2.3.1
     dev: true
 
   registry.npmmirror.com/parse-filepath/1.0.2:
@@ -8329,29 +8301,11 @@ packages:
       global-modules: 1.0.0
     dev: true
 
-  registry.npmmirror.com/restore-cursor/4.0.0:
-    resolution: {integrity: sha512-I9fPXU9geO9bHOt9pHHOhOkYerIMsmVaWB0rA2AI9ERh/+x/i7MV5HKBNrg+ljO5eoPVgCcnFuRjJ9uH6I/3eg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/restore-cursor/-/restore-cursor-4.0.0.tgz}
-    name: restore-cursor
-    version: 4.0.0
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
-    dependencies:
-      onetime: 5.1.2
-      signal-exit: 3.0.7
-    dev: true
-
   registry.npmmirror.com/run-async/2.4.1:
     resolution: {integrity: sha512-tvVnVv01b8c1RrA6Ep7JkStj85Guv/YrMcwqYQnwjsAS2cTmmPGBBjAjpCW7RrSodNSoE2/qg9O4bceNvUuDgQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/run-async/-/run-async-2.4.1.tgz}
     name: run-async
     version: 2.4.1
     engines: {node: '>=0.12.0'}
-    dev: true
-
-  registry.npmmirror.com/rxjs/7.5.5:
-    resolution: {integrity: sha512-sy+H0pQofO95VDmFLzyaw9xNJU4KTRSwQIGM6+iG3SypAtCiLDzpeG8sJrNCWn2Up9km+KhkvTdbkrdy+yzZdw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/rxjs/-/rxjs-7.5.5.tgz}
-    name: rxjs
-    version: 7.5.5
-    dependencies:
-      tslib: 2.3.1
     dev: true
 
   registry.npmmirror.com/sax/1.2.4:
@@ -8398,7 +8352,7 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
-      lru-cache: registry.npmmirror.com/lru-cache/6.0.0
+      lru-cache: 6.0.0
     dev: true
 
   registry.npmmirror.com/sentence-case/3.0.4:
@@ -8506,18 +8460,12 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  registry.npmmirror.com/through/2.3.8:
-    resolution: {integrity: sha512-w89qg7PI8wAdvX60bMDP+bFoD5Dvhm9oLheFp5O4a2QF0cSBGsBX4qZmadPMvVqlLJBBci+WqGGOAPvcDeNSVg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/through/-/through-2.3.8.tgz}
-    name: through
-    version: 2.3.8
-    dev: true
-
   registry.npmmirror.com/title-case/3.0.3:
     resolution: {integrity: sha512-e1zGYRvbffpcHIrnuqT0Dh+gEJtDaxDSoG4JAIpq4oDFyooziLBIiYQv0GBT4FUAnUop5uZ1hiIAj7oAF6sOCA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/title-case/-/title-case-3.0.3.tgz}
     name: title-case
     version: 3.0.3
     dependencies:
-      tslib: registry.npmmirror.com/tslib/2.3.1
+      tslib: 2.3.1
     dev: true
 
   registry.npmmirror.com/tmp/0.0.33:
@@ -8586,7 +8534,7 @@ packages:
     name: upper-case
     version: 2.0.2
     dependencies:
-      tslib: registry.npmmirror.com/tslib/2.3.1
+      tslib: 2.3.1
     dev: true
 
   registry.npmmirror.com/utila/0.4.0:

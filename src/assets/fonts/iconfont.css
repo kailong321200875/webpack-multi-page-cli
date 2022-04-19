@@ -1,24 +1,24 @@
 @font-face {
-  font-family: 'iconfont'; /* Project id  */
+  font-family: iconfont; /* Project id  */
   src: url('iconfont.ttf?t=1649312398597') format('truetype');
 }
 
 .iconfont {
-  font-family: 'iconfont' !important;
+  font-family: iconfont !important;
   font-size: 16px;
-  font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
 }
 
-.icon-weixin:before {
+.icon-weixin::before {
   content: '\e610';
 }
 
-.icon-facebookfacebook52:before {
+.icon-facebookfacebook52::before {
   content: '\e60b';
 }
 
-.icon-github:before {
+.icon-github::before {
   content: '\e673';
 }
