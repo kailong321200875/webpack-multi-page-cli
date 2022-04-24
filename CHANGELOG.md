@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.1](https://github.com/kailong321200875/webpack-multi-page-cli/compare/v1.0.0...v1.0.1) (2022-04-24)
+
+
+### Build System
+
+* update plugins ([4516887](https://github.com/kailong321200875/webpack-multi-page-cli/commit/4516887aa022e40c8131e5a39125e8f2645d4cd9))
+
 ## 1.0.0 (2022-04-19)
 
 
