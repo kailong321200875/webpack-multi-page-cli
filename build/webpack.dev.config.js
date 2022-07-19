@@ -57,7 +57,9 @@ const devWebpackConfig = merge(baseWebpackConfig, {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/views/index/index.html',
-      favicon: path.resolve(__dirname, '../public/favicon.ico')
+      filename: 'index.html',
+      favicon: path.resolve(__dirname, '../public/favicon.ico'),
+      chunks: ['index']
     }),
     new ESLintPlugin({
       extensions: ['js', 'html']

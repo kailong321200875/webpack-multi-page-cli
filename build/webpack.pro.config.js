@@ -38,7 +38,8 @@ const proWebpackConfig = merge(baseWebpackConfig, {
     new HtmlWebpackPlugin({
       template: './src/views/index/index.html',
       filename: 'html/index.html',
-      favicon: path.resolve(__dirname, '../public/favicon.ico')
+      favicon: path.resolve(__dirname, '../public/favicon.ico'),
+      chunks: ['index']
     }),
 
     new MiniCssExtractPlugin({
@@ -67,13 +68,6 @@ const proWebpackConfig = merge(baseWebpackConfig, {
       cacheGroups: {
         // 配置提取模块的方案
         default: false,
-        styles: {
-          name: 'styles',
-          test: /\.(css|less)$/,
-          chunks: 'all',
-          enforce: true,
-          priority: 10
-        },
         vendors: {
           name: 'chunk-vendors',
           test: /[\\/]node_modules[\\/]/,
