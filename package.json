@@ -6,6 +6,9 @@
   "scripts": {
     "serve": "cross-env NODE_ENV=development webpack serve --progress --no-stats --config ./build/webpack.dev.config.js",
     "build": "cross-env NODE_ENV=production webpack --config ./build/webpack.pro.config.js",
+    "build:pre": "cross-env NODE_ENV=pre webpack --config ./build/webpack.pro.config.js",
+    "build:beta": "cross-env NODE_ENV=beta webpack --config ./build/webpack.pro.config.js",
+    "build:release": "cross-env NODE_ENV=release webpack --config ./build/webpack.pro.config.js",
     "p": "plop --plopfile ./plop/generator/create-module.js",
     "clean": "npx rimraf node_modules",
     "clean:cache": "npx rimraf node_modules/.cache",

@@ -1,0 +1,11 @@
+[
+  {
+    "name": "index",
+    "entry": "./src/views/index/index.js",
+    "template": "./src/views/index/index.html",
+    "devFilename": "./index.html",
+    "proFilename": "html/index.html",
+    "favicon": "../public/favicon.ico",
+    "chunks": ["chunk-vendors", "index"]
+  }
+]

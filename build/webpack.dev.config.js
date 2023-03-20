@@ -12,6 +12,8 @@ const ESLintPlugin = require('eslint-webpack-plugin')
 // 引入基础配置文件
 const baseWebpackConfig = require('./webpack.base.config')
 
+const utils = require('./utils')
+
 const devWebpackConfig = merge(baseWebpackConfig, {
   // 模式，必填项
   mode: 'development',
@@ -55,12 +57,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
 
   // 插件
   plugins: [
-    new HtmlWebpackPlugin({
-      template: './src/views/index/index.html',
-      filename: 'index.html',
-      favicon: path.resolve(__dirname, '../public/favicon.ico'),
-      chunks: ['index']
-    }),
+    ...utils.getDevHtmls(),
     new ESLintPlugin({
       extensions: ['js', 'html']
     })

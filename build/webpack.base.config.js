@@ -9,13 +9,21 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 // 引入静态资源复制插件
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const utils = require('./utils')
+
+const DefinePlugin = require("webpack").DefinePlugin;
+
+const dotenv = require("dotenv");
+
+const dotenvFile = path.resolve(__dirname, `../.env.${process.env.NODE_ENV}`);
+
+dotenv.config({
+  path: dotenvFile,
+});
 
 module.exports = {
   // 打包入口地址
-  entry: {
-    // 由于可能是多页，所以采用对象的形式
-    index: ['./src/views/index/index.js']
-  },
+  entry: utils.getEntry(),
 
   // 模块resolve的规则
   resolve: {
@@ -116,6 +124,9 @@ module.exports = {
           }
         }
       ]
-    })
+    }),
+    new DefinePlugin({
+      "process.env": JSON.stringify(process.env),
+    }),
   ]
 }
