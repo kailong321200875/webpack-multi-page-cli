@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/kailong321200875/webpack-multi-page-cli/compare/v1.1.0...v1.2.0) (2023-03-21)
+
+
+### Features
+
+* 更新配置 ([9ce29b7](https://github.com/kailong321200875/webpack-multi-page-cli/commit/9ce29b78a3cb1a95559fd0206b74527864c214d9))
+
 ## [1.1.0](https://github.com/kailong321200875/webpack-multi-page-cli/compare/v1.0.2...v1.1.0) (2023-03-20)
 
 
