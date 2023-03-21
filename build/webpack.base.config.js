@@ -23,7 +23,7 @@ dotenv.config({
 const env = {};
 Object.keys(process.env).forEach(key => {
   if (key.startsWith('V_')) {
-    env[key.slice('V_'.length)] = process.env[key];
+    env[key] = process.env[key];
   }
 });
 
