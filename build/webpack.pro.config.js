@@ -32,6 +32,34 @@ const proWebpackConfig = merge(baseWebpackConfig, {
     clean: true
   },
 
+  module: {
+    rules: [
+      // 处理 css、less 文件
+      {
+        test: /\.(css|less)$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              // 是否使用source-map
+              sourceMap: false,
+              esModule: false
+            }
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              // 是否使用source-map
+              sourceMap: false
+            }
+          },
+          'less-loader'
+        ]
+      },
+    ]
+  },
+
   // 源码映射
   devtool: false,
 

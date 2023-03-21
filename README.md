@@ -25,16 +25,70 @@ pnpm install
 
 ```
 
+## 如何新增页面
+
+考虑到一个页面的创建比较麻烦，所以提供快速创建页面的命令：
+
+```bash
+npm run p
+```
+
+之后输入要创建的模块名称即可创建成功，之后需要在运行以下命令，用于webpack配置动态获取html模块：
+
+```bash
+npm run tems
+```
+
+完成之后，需要重新启动项目
+
+## 环境变量
+
+目前共有三种环境：`development`、`pre`、`beta`、`release`，如果需要新增环境变量，可以在对应的 `.env.xxx` 文件中新增，需要注意的事，环境变量的前缀必须是 `v_` 开头，否则不注入到浏览器环境中。
+
 - 运行
+
+运行 `development` 环境
 
 ```bash
 pnpm run serve
 ```
 
-- 打包
+运行 `pre` 环境
 
 ```bash
-pnpm run build
+pnpm run serve:pre
+```
+
+运行 `beta` 环境
+
+```bash
+pnpm run serve:beta
+```
+
+运行 `release` 环境
+
+```bash
+pnpm run serve:release
+```
+
+- 打包
+
+打包 `pre` 环境
+
+```bash
+pnpm run build:pre
+```
+
+打包 `beta` 环境
+
+```bash
+pnpm run build:beta
+```
+
+打包 `release` 环境
+
+```bash
+pnpm run build:release
 ```
 
 ## 浏览器支持

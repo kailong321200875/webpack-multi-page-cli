@@ -1,11 +1,1 @@
-[
-  {
-    "name": "index",
-    "entry": "./src/views/index/index.js",
-    "template": "./src/views/index/index.html",
-    "devFilename": "./index.html",
-    "proFilename": "html/index.html",
-    "favicon": "../public/favicon.ico",
-    "chunks": ["chunk-vendors", "index"]
-  }
-]
+[{"name":"index","entry":"./src/views/index/index.js","template":"./src/views/index/index.html","devFilename":"./index.html","proFilename":"html/index.html","favicon":"../public/favicon.ico","chunks":["chunk-vendors","index"]},{"name":"login","entry":"./src/views/login/login.js","template":"./src/views/login/login.html","devFilename":"./login.html","proFilename":"html/login.html","favicon":"../public/favicon.ico","chunks":["chunk-vendors","login"]}]

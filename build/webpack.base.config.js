@@ -2,10 +2,7 @@
 const path = require('path')
 
 // 判断当前环境是否是生产环境
-const isProduction = process.env.NODE_ENV === 'production'
-
-// 样式单独分离到一个文件中
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const isProduction = process.env.NODE_ENV !== 'development'
 
 // 引入静态资源复制插件
 const CopyWebpackPlugin = require('copy-webpack-plugin')
@@ -17,8 +14,17 @@ const dotenv = require("dotenv");
 
 const dotenvFile = path.resolve(__dirname, `../.env.${process.env.NODE_ENV}`);
 
+// 读取dotenvFile内容
+
 dotenv.config({
   path: dotenvFile,
+});
+
+const env = {};
+Object.keys(process.env).forEach(key => {
+  if (key.startsWith('V_')) {
+    env[key.slice('V_'.length)] = process.env[key];
+  }
 });
 
 module.exports = {
@@ -41,29 +47,6 @@ module.exports = {
   // 不同类型模块的处理规则
   module: {
     rules: [
-      // 处理 css、less 文件
-      {
-        test: /\.(css|less)$/,
-        use: [
-          isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              // 是否使用source-map
-              sourceMap: !isProduction,
-              esModule: false
-            }
-          },
-          {
-            loader: 'postcss-loader',
-            options: {
-              // 是否使用source-map
-              sourceMap: !isProduction
-            }
-          },
-          'less-loader'
-        ]
-      },
       // 解析 html 中的 src 路径
       {
         test: /\.html$/,
@@ -126,7 +109,7 @@ module.exports = {
       ]
     }),
     new DefinePlugin({
-      "process.env": JSON.stringify(process.env),
+      "process.env": JSON.stringify(env),
     }),
   ]
 }

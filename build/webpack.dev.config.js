@@ -26,6 +26,34 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     }
   },
 
+  module: {
+    rules: [
+      // 处理 css、less 文件
+      {
+        test: /\.(css|less)$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              // 是否使用source-map
+              sourceMap: true,
+              esModule: false
+            }
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              // 是否使用source-map
+              sourceMap: true
+            }
+          },
+          'less-loader'
+        ]
+      },
+    ]
+  },
+
   output: {
     // 输出文件目录
     path: path.resolve(__dirname, '../dist'),

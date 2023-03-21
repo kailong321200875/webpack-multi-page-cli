@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "serve": "cross-env NODE_ENV=development webpack serve --progress --no-stats --config ./build/webpack.dev.config.js",
-    "build": "cross-env NODE_ENV=production webpack --config ./build/webpack.pro.config.js",
+    "serve:pre": "cross-env NODE_ENV=pre webpack serve --progress --no-stats --config ./build/webpack.dev.config.js",
+    "serve:beta": "cross-env NODE_ENV=beta webpack serve --progress --no-stats --config ./build/webpack.dev.config.js",
+    "serve:release": "cross-env NODE_ENV=release webpack serve --progress --no-stats --config ./build/webpack.dev.config.js",
     "build:pre": "cross-env NODE_ENV=pre webpack --config ./build/webpack.pro.config.js",
     "build:beta": "cross-env NODE_ENV=beta webpack --config ./build/webpack.pro.config.js",
     "build:release": "cross-env NODE_ENV=release webpack --config ./build/webpack.pro.config.js",
@@ -18,7 +20,8 @@
     "lint:style": "stylelint --fix \"**/*.{less,postcss,css,scss}\"",
     "lint:lint-staged": "lint-staged -c ./.husky/lintstagedrc.js",
     "prepare": "husky install",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tems": "node ./plop/utils/tems.js"
   },
   "repository": {
     "type": "git",
@@ -41,6 +44,7 @@
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.3",
     "css-minimizer-webpack-plugin": "^4.2.2",
+    "dotenv": "^16.0.3",
     "eslint": "^8.36.0",
     "eslint-config-prettier": "^8.7.0",
     "eslint-plugin-html": "^7.1.0",
@@ -60,6 +64,7 @@
     "postcss-loader": "^7.1.0",
     "postcss-preset-env": "^8.0.1",
     "prettier": "^2.8.4",
+    "require-context": "^1.1.0",
     "style-loader": "^3.3.2",
     "stylelint": "^15.3.0",
     "stylelint-config-html": "^1.1.0",
@@ -73,6 +78,8 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
+    "jquery": "^3.6.4",
+    "qs": "^6.11.1",
     "tool-helper": "^1.6.0"
   }
 }
